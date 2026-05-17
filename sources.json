@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "id": "brasil",
+      "name": "Brasil",
+      "feeds": [
+        {
+          "name": "Folha de S.Paulo",
+          "url": "https://feeds.folha.uol.com.br/poder/rss091.xml",
+          "maxItems": 5
+        },
+        {
+          "name": "G1",
+          "url": "https://g1.globo.com/rss/g1/",
+          "maxItems": 5
+        },
+        {
+          "name": "UOL",
+          "url": "https://rss.uol.com.br/feed/noticias.xml",
+          "maxItems": 5
+        },
+        {
+          "name": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+          "maxItems": 5
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "name": "Mundo",
+      "feeds": [
+        {
+          "name": "BBC World",
+          "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+          "maxItems": 5
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/xml/rss/all.xml",
+          "maxItems": 4
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/world/rss",
+          "maxItems": 4
+        }
+      ]
+    },
+    {
+      "id": "economia",
+      "name": "Economia & Mercados",
+      "feeds": [
+        {
+          "name": "Valor Econômico",
+          "url": "https://valor.globo.com/rss/valor",
+          "maxItems": 4
+        },
+        {
+          "name": "InfoMoney",
+          "url": "https://www.infomoney.com.br/feed/",
+          "maxItems": 3
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "name": "Tecnologia, Ciência & Cultura",
+      "feeds": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "maxItems": 3
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://feeds.arstechnica.com/arstechnica/index",
+          "maxItems": 3
+        },
+        {
+          "name": "MIT Tech Review",
+          "url": "https://www.technologyreview.com/feed/",
+          "maxItems": 3
+        }
+      ]
+    }
+  ]
+}

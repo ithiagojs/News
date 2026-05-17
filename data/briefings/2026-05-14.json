@@ -1,0 +1,230 @@
+{
+  "date": "2026-05-14",
+  "generatedAt": "2026-05-14T22:22:35.487Z",
+  "mode": "groq",
+  "headline": {
+    "title": "Notícias do Dia: Brasil, Mundo, Economia e Tecnologia",
+    "summary": "Confira as principais notícias do dia, incluindo eventos no Brasil, no mundo, na economia e na tecnologia."
+  },
+  "sections": [
+    {
+      "id": "brasil",
+      "name": "Brasil",
+      "items": [
+        {
+          "title": "Fim de Semana em Ribeirão Preto e Franca",
+          "context": "O fim de semana tem programação garantida para toda a família, com eventos culturais, musicais e de lazer na região de Ribeirão Preto (SP) e Franca (SP).",
+          "source": "G1",
+          "link": "https://g1.globo.com/sp/ribeirao-preto-franca/em-cena/noticia/2026/05/14/pericles-festival-em-barretos-edu-falaschi-veja-atracoes-do-fim-de-semana-na-regiao-de-ribeirao-e-franca.ghtml"
+        },
+        {
+          "title": "Assista aos Telejornais da TV Liberal",
+          "context": "Assista aos telejornais da TV Liberal. O G1 transmite também os telejornais Jornal Liberal 1ª e 2ª Edição.",
+          "source": "G1",
+          "link": "https://g1.globo.com/pa/para/ao-vivo/assista-aos-telejornais-da-tv-liberal.ghtml"
+        },
+        {
+          "title": "Homem Preso por Pedir Fotos Íntimas de Criança",
+          "context": "Um homem foi preso por pedir fotos íntimas e ameaçar uma criança de 11 anos em Sergipe.",
+          "source": "G1",
+          "link": "https://g1.globo.com/se/sergipe/noticia/2026/05/14/homem-e-preso-apos-pedir-fotos-intimas-e-ameacar-crianca-de-11-anos-em-sergipe.ghtml"
+        },
+        {
+          "title": "AO VIVO: Assista ao JAC2 com Quésia Melo",
+          "context": "Participe pelo telefone (68) 99211-2930.",
+          "source": "G1",
+          "link": "https://g1.globo.com/ac/acre/ao-vivo/ao-vivo-assista-ao-jac2-com-quesia-melo.ghtml"
+        },
+        {
+          "title": "Assista ao JRO2 desta Quinta-feira",
+          "context": "Assista ao JRO2 desta quinta-feira, 14.",
+          "source": "G1",
+          "link": "https://g1.globo.com/ro/rondonia/ao-vivo/assista-ao-jro2-desta-quinta-feira-14.ghtml"
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "name": "Mundo",
+      "items": [
+        {
+          "title": "Julgamento de Elon Musk contra OpenAI",
+          "context": "Elon Musk acusa a OpenAI de violar a confiança e priorizar o lucro em detrimento da segurança e dos valores sem fins lucrativos.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/economy/2026/5/14/closing-arguments-begin-in-elon-musks-landmark-lawsuit-against-openai?traffic_source=rss"
+        },
+        {
+          "title": "CIA Chefe Visita Havana",
+          "context": "A visita ocorreu após os EUA renovarem a oferta de ajuda para aliviar os efeitos do bloqueio de petróleo.",
+          "source": "BBC World",
+          "link": "https://www.bbc.com/news/articles/cd7pyrj0vx7o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Guerra no Irã Pode Desencadear Crise de Fome",
+          "context": "A ONU alerta que as interrupções no Estreito de Ormuz podem aumentar os custos de alimentos e fertilizantes, piorando a fome global.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/video/counting-the-cost/2026/5/14/could-iran-war-trigger-a-hunger-crisis?traffic_source=rss"
+        },
+        {
+          "title": "China se Beneficia da Ação dos EUA no Irã",
+          "context": "O analista geopolítico Steve Okun afirma que a China está se beneficiando da guerra contra o Irã.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/5/14/china-is-gaining-from-what-the-us-is-doing-in?traffic_source=rss"
+        },
+        {
+          "title": "Chefe da Patrulha de Fronteira dos EUA Renuncia",
+          "context": "A renúncia ocorre após várias partidas de alto nível no Departamento de Segurança Nacional dos EUA.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/news/2026/5/14/border-patrol-chief-mike-banks-resigns-in-latest-trump-immigration-shakeup?traffic_source=rss"
+        }
+      ]
+    },
+    {
+      "id": "economia",
+      "name": "Economia & Mercados",
+      "items": [
+        {
+          "title": "Cyrela Sente Impacto do Petróleo nos Custos",
+          "context": "A Cyrela já sente o aumento nos custos dos projetos devido ao aumento do preço do petróleo.",
+          "source": "Valor Econômico",
+          "link": "https://valor.globo.com/empresas/noticia/2026/05/14/cyrela-ja-sente-impacto-do-petroleo-nos-custos-e-espera-inflacao-setorial-perto-de-8percent-no-ano.ghtml"
+        },
+        {
+          "title": "Flávio Bolsonaro Diz que Conta com Ciro Nogueira",
+          "context": "Flávio Bolsonaro afirma que conta com Ciro Nogueira para provar sua inocência.",
+          "source": "Valor Econômico",
+          "link": "https://valor.globo.com/financas/noticia/2026/05/14/flavio-diz-contar-com-ciro-nogueira-para-provar-sua-inocencia-se-deus-quiser.ghtml"
+        },
+        {
+          "title": "Flávio Bolsonaro Diz que Buscava Investidores para Filme",
+          "context": "Flávio Bolsonaro afirma que buscava investidores para um filme, e não para um projeto de construção.",
+          "source": "InfoMoney",
+          "link": "https://www.infomoney.com.br/politica/flavio-bolsonaro-diz-que-pedido-a-vorcaro-foi-busca-de-investidores-para-filme/"
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "name": "Tecnologia, Ciência & Cultura",
+      "items": [
+        {
+          "title": "Julgamento de Elon Musk contra OpenAI",
+          "context": "O julgamento de Elon Musk contra a OpenAI entrou em sua fase final.",
+          "source": "The Verge",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/931006/musk-v-altman-closing-arguments-analysis"
+        },
+        {
+          "title": "Desconto em Metroid Prime 4: Beyond",
+          "context": "O jogo Metroid Prime 4: Beyond está com desconto na Best Buy.",
+          "source": "The Verge",
+          "link": "https://www.theverge.com/gadgets/930875/metroid-prime-4-beyond-nintendo-switch-deal-sale"
+        },
+        {
+          "title": "Meta Lança Recurso de Escrita Virtual",
+          "context": "A Meta lançou um recurso de escrita virtual para seus óculos inteligentes Ray-Ban Display.",
+          "source": "The Verge",
+          "link": "https://www.theverge.com/tech/930941/meta-ray-ban-display-virtual-neural-handwriting-apps-developer"
+        },
+        {
+          "title": "Gêmeos Hackers Esquecem de Desligar Gravação",
+          "context": "Dois gêmeos hackers esqueceram de desligar a gravação de uma reunião e capturaram seus próprios crimes.",
+          "source": "Ars Technica",
+          "link": "https://arstechnica.com/tech-policy/2026/05/fired-hacker-twins-forget-to-end-teams-recording-capture-own-crimes/"
+        }
+      ]
+    }
+  ],
+  "whyItMatters": [
+    "As notícias do dia podem afetar a economia e a política do país.",
+    "As decisões tomadas pelos líderes mundiais podem ter impacto nas relações internacionais.",
+    "As inovações tecnológicas podem mudar a forma como vivemos e trabalhamos."
+  ],
+  "sourceLinks": [
+    {
+      "source": "G1",
+      "title": "Péricles, festival em Barretos, Edu Falaschi: veja atrações do fim de semana na região de Ribeirão e Franca",
+      "url": "https://g1.globo.com/sp/ribeirao-preto-franca/em-cena/noticia/2026/05/14/pericles-festival-em-barretos-edu-falaschi-veja-atracoes-do-fim-de-semana-na-regiao-de-ribeirao-e-franca.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "Assista aos telejornais da TV Liberal",
+      "url": "https://g1.globo.com/pa/para/ao-vivo/assista-aos-telejornais-da-tv-liberal.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "Homem é preso após pedir fotos íntimas e ameaçar criança de 11 anos em Sergipe",
+      "url": "https://g1.globo.com/se/sergipe/noticia/2026/05/14/homem-e-preso-apos-pedir-fotos-intimas-e-ameacar-crianca-de-11-anos-em-sergipe.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "AO VIVO: Assista ao JAC2 com Quésia Melo",
+      "url": "https://g1.globo.com/ac/acre/ao-vivo/ao-vivo-assista-ao-jac2-com-quesia-melo.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "Assista ao JRO2 desta quinta-feira, 14",
+      "url": "https://g1.globo.com/ro/rondonia/ao-vivo/assista-ao-jro2-desta-quinta-feira-14.ghtml"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Closing arguments begin in Elon Musk’s landmark lawsuit against OpenAI",
+      "url": "https://www.aljazeera.com/economy/2026/5/14/closing-arguments-begin-in-elon-musks-landmark-lawsuit-against-openai?traffic_source=rss"
+    },
+    {
+      "source": "BBC World",
+      "title": "Cuba says CIA chief visited Havana as energy crisis worsens",
+      "url": "https://www.bbc.com/news/articles/cd7pyrj0vx7o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Could Iran war trigger a hunger crisis?",
+      "url": "https://www.aljazeera.com/video/counting-the-cost/2026/5/14/could-iran-war-trigger-a-hunger-crisis?traffic_source=rss"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "‘China is gaining from what the US is doing in Iran’",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/5/14/china-is-gaining-from-what-the-us-is-doing-in?traffic_source=rss"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Border Patrol chief Mike Banks resigns in latest Trump immigration shakeup",
+      "url": "https://www.aljazeera.com/news/2026/5/14/border-patrol-chief-mike-banks-resigns-in-latest-trump-immigration-shakeup?traffic_source=rss"
+    },
+    {
+      "source": "Valor Econômico",
+      "title": "Cyrela já sente impacto do petróleo nos custos e espera inflação setorial perto de 8% no ano",
+      "url": "https://valor.globo.com/empresas/noticia/2026/05/14/cyrela-ja-sente-impacto-do-petroleo-nos-custos-e-espera-inflacao-setorial-perto-de-8percent-no-ano.ghtml"
+    },
+    {
+      "source": "Valor Econômico",
+      "title": "Flávio diz contar com Ciro Nogueira para provar sua inocência: ‘se Deus quiser’",
+      "url": "https://valor.globo.com/financas/noticia/2026/05/14/flavio-diz-contar-com-ciro-nogueira-para-provar-sua-inocencia-se-deus-quiser.ghtml"
+    },
+    {
+      "source": "InfoMoney",
+      "title": "Flávio Bolsonaro diz que pedido a Vorcaro foi busca de “investidores” para filme",
+      "url": "https://www.infomoney.com.br/politica/flavio-bolsonaro-diz-que-pedido-a-vorcaro-foi-busca-de-investidores-para-filme/"
+    },
+    {
+      "source": "The Verge",
+      "title": "Closing time",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/931006/musk-v-altman-closing-arguments-analysis"
+    },
+    {
+      "source": "The Verge",
+      "title": "Metroid Prime 4: Beyond got its first big discount",
+      "url": "https://www.theverge.com/gadgets/930875/metroid-prime-4-beyond-nintendo-switch-deal-sale"
+    },
+    {
+      "source": "The Verge",
+      "title": "Meta brings virtual writing to everyone with Meta Ray-Ban Display glasses",
+      "url": "https://www.theverge.com/tech/930941/meta-ray-ban-display-virtual-neural-handwriting-apps-developer"
+    },
+    {
+      "source": "Ars Technica",
+      "title": "Fired hacker twins forget to end Teams recording, capture own crimes",
+      "url": "https://arstechnica.com/tech-policy/2026/05/fired-hacker-twins-forget-to-end-teams-recording-capture-own-crimes/"
+    }
+  ],
+  "errors": []
+}

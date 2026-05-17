@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefing</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  color-scheme:light;
+  --bg:#f6f5f2;--surface:#ffffff;--surface-2:#eeece7;--border:#ddd8cf;
+  --text:#191714;--muted:#6f6960;--faint:#918a80;--accent:#b42318;
+  --accent-strong:#8f1b13;--accent-soft:#fff0ec;--focus:#f8d47a;
+  --shadow:0 1px 2px rgba(35,30,24,.06),0 12px 35px rgba(35,30,24,.08);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --radius:8px;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#11100e;--surface:#1b1916;--surface-2:#25221e;--border:#38332c;
+  --text:#f3efe7;--muted:#bbb2a4;--faint:#938879;--accent:#ff806f;
+  --accent-strong:#ffad9f;--accent-soft:#331b17;--focus:#8a6424;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 18px 45px rgba(0,0,0,.24);
+}
+html{font-size:15px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+button,input{font:inherit}
+.app{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;background:var(--surface);border-right:1px solid var(--border);padding:1.25rem;display:flex;flex-direction:column;gap:1.25rem;overflow:auto}
+.brand h1{font-size:1.1rem;letter-spacing:0;font-weight:750}
+.brand p{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+.status{display:grid;gap:.4rem;padding:.8rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface-2)}
+.status span{font-size:.75rem;color:var(--muted)}
+.status strong{font-size:.85rem}
+.section-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);font-weight:700}
+.history-list{list-style:none;display:grid;gap:.25rem}
+.history-list button{width:100%;text-align:left;border:0;background:transparent;color:var(--muted);padding:.45rem .55rem;border-radius:var(--radius);cursor:pointer}
+.history-list button:hover,.history-list button.active{background:var(--accent-soft);color:var(--accent-strong)}
+.history-empty{font-size:.82rem;color:var(--faint);padding:.5rem}
+.sidebar-actions{margin-top:auto;display:grid;gap:.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+.main{max-width:980px;width:100%;padding:2rem 2.25rem 4rem}
+.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.5rem}
+.topbar h2{font-size:1.35rem;line-height:1.2}
+.date-line{font-size:.85rem;color:var(--muted);margin-top:.25rem}
+.actions{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);padding:.55rem .82rem;min-height:36px;cursor:pointer;font-size:.86rem;font-weight:650;transition:background .15s,border-color .15s,color .15s}
+.btn:hover{background:var(--surface-2)}
+.btn:disabled{opacity:.58;cursor:not-allowed}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-strong);border-color:var(--accent-strong)}
+:root[data-theme="dark"] .btn-primary{color:#160c09}
+.btn-ghost{background:transparent}
+.btn-full{width:100%}
+.icon{width:16px;height:16px;display:inline-block}
+.empty-state{display:grid;align-content:center;min-height:65vh;max-width:540px;color:var(--muted)}
+.empty-state h2{font-size:1.6rem;color:var(--text);margin-bottom:.45rem}
+.empty-state p{font-size:.96rem;margin-bottom:1rem}
+.notice{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);padding:.85rem 1rem;color:var(--muted);font-size:.86rem;margin-bottom:1rem}
+.notice strong{color:var(--text)}
+.notice code{font-family:var(--mono);font-size:.82em}
+.headline{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.25rem 1.35rem;margin-bottom:1.5rem}
+.eyebrow{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--accent);margin-bottom:.45rem}
+.headline h1{font-size:1.45rem;line-height:1.2;margin-bottom:.5rem;letter-spacing:0}
+.headline p{color:var(--muted);font-size:.96rem;max-width:72ch}
+.section{margin-top:1.6rem}
+.section-header{display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-bottom:1px solid var(--border);padding-bottom:.45rem;margin-bottom:.7rem}
+.section-header h3{font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:800}
+.badge{font-size:.74rem;color:var(--muted);background:var(--surface-2);border-radius:999px;padding:.18rem .5rem}
+.item-list{display:grid;gap:.55rem}
+.news-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.85rem 1rem;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.news-meta{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:800;margin-bottom:.28rem}
+.news-item h4{font-size:.96rem;line-height:1.35;margin-bottom:.22rem}
+.news-item h4 a{color:var(--text)}
+.news-item p{font-size:.86rem;color:var(--muted)}
+.why{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 32%,var(--border));border-radius:var(--radius);padding:1rem 1.15rem;margin-top:1.8rem}
+.why h3{font-size:.92rem;color:var(--accent-strong);margin-bottom:.5rem}
+.why ul{list-style:none;display:grid;gap:.35rem}
+.why li{position:relative;padding-left:1rem;font-size:.9rem}
+.why li::before{content:"";position:absolute;left:0;top:.68em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.sources{margin-top:1.8rem;padding-top:1rem;border-top:1px solid var(--border)}
+.sources h3{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-bottom:.5rem}
+.sources ul{list-style:none;display:grid;gap:.35rem}
+.sources li{font-size:.84rem;color:var(--muted)}
+.sources a{color:var(--muted)}
+.errors{margin-top:1rem;color:var(--faint);font-size:.8rem}
+.spinner{width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.toast{position:fixed;right:1.2rem;bottom:1.2rem;background:var(--text);color:var(--bg);padding:.7rem .9rem;border-radius:var(--radius);box-shadow:var(--shadow);font-size:.86rem;opacity:0;transform:translateY(8px);pointer-events:none;transition:.2s;z-index:20}
+.toast.show{opacity:1;transform:translateY(0)}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.48);display:none;align-items:center;justify-content:center;padding:1rem;z-index:30}
+.modal{width:min(760px,100%);max-height:86vh;overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:1.2rem}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.modal-head h3{font-size:1rem}
+.source-group{border:1px solid var(--border);border-radius:var(--radius);padding:.9rem;margin-bottom:.8rem;background:var(--bg)}
+.source-group label{display:block;font-size:.72rem;color:var(--faint);font-weight:750;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.25rem}
+.source-row{display:grid;grid-template-columns:minmax(110px,1fr) minmax(180px,2fr) 40px;gap:.4rem;margin-top:.4rem}
+.field{width:100%;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);padding:.48rem .55rem;font-size:.84rem}
+.field:focus{outline:2px solid var(--focus);outline-offset:1px}
+@media(max-width:780px){
+  .app{display:block}
+  .sidebar{position:relative;width:100%;height:auto;border-right:0;border-bottom:1px solid var(--border)}
+  .main{padding:1rem}
+  .topbar{display:grid}
+  .actions{justify-content:flex-start}
+  .source-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>Daily Briefing</h1>
+      <p>Brasil, mundo, mercados e cultura em leitura rapida.</p>
+    </div>
+
+    <div class="status">
+      <span>Status da API local</span>
+      <strong id="apiStatus">Verificando...</strong>
+      <span id="apiMode"></span>
+    </div>
+
+    <div>
+      <p class="section-label">Historico</p>
+      <ul class="history-list" id="historyList">
+        <li class="history-empty">Nenhum briefing salvo</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-actions">
+      <button class="btn btn-primary btn-full" id="generateSideBtn" onclick="generateBriefing(true)">Gerar briefing</button>
+      <button class="btn btn-full" onclick="toggleTheme()" id="themeBtn">Modo escuro</button>
+      <button class="btn btn-full" onclick="showSources()">Fontes RSS</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div id="emptyState" class="empty-state">
+      <h2>Seu briefing diario</h2>
+      <p>Gere um resumo completo com manchete do dia, secoes editoriais, contexto curto, motivos praticos e links das fontes.</p>
+      <div id="fileWarning" class="notice" style="display:none">
+        <strong>Este arquivo nao inicia a API.</strong> Feche esta aba e abra <code>Abrir Daily Briefing.bat</code> nesta pasta. Ele sobe o servidor e abre <code>http://localhost:4173</code>.
+      </div>
+      <button class="btn btn-primary" id="generateBtn" onclick="generateBriefing(true)">Gerar briefing de hoje</button>
+    </div>
+    <div id="briefingView" style="display:none"></div>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="sourcesModal" onclick="closeSourcesOnBackdrop(event)">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Fontes RSS</h3>
+      <button class="btn btn-ghost" onclick="hideSources()">Fechar</button>
+    </div>
+    <div id="sourcesEditor"></div>
+    <div class="actions" style="margin-top:1rem">
+      <button class="btn" onclick="loadSources()">Recarregar</button>
+      <button class="btn btn-primary" onclick="saveSources()">Salvar fontes</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API_BASE = location.protocol === 'file:' ? 'http://localhost:4173' : '';
+const THEME_KEY = 'daily-briefing-theme';
+const APP_TIME_ZONE = 'America/Sao_Paulo';
+let currentBriefing = null;
+let currentSources = null;
+
+document.addEventListener('DOMContentLoaded', async () => {
+  applyStoredTheme();
+  const online = await checkHealth();
+  if (location.protocol === 'file:' && online) {
+    location.href = 'http://localhost:4173';
+    return;
+  }
+  if (location.protocol === 'file:') {
+    document.getElementById('fileWarning').style.display = 'block';
+    setButtonsForFileMode();
+  }
+  await refreshHistory();
+  await loadToday();
+});
+
+function todayISO() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: APP_TIME_ZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date());
+}
+
+function formatDate(date) {
+  return new Date(`${date}T12:00:00`).toLocaleDateString('pt-BR', {
+    weekday: 'short', day: '2-digit', month: 'short', year: 'numeric'
+  });
+}
+
+function escapeHtml(value = '') {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[char]));
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2400);
+}
+
+async function api(path, options = {}) {
+  const response = await fetch(`${API_BASE}${path}`, {
+    ...options,
+    headers: {
+      'content-type': 'application/json',
+      ...(options.headers || {})
+    }
+  });
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(text || `HTTP ${response.status}`);
+  }
+  const type = response.headers.get('content-type') || '';
+  return type.includes('application/json') ? response.json() : response.text();
+}
+
+async function checkHealth() {
+  const status = document.getElementById('apiStatus');
+  const mode = document.getElementById('apiMode');
+  try {
+    const health = await api('/api/health');
+    status.textContent = 'Online';
+    if (health.provider === 'groq') mode.textContent = `IA ativa via Groq: ${health.model}`;
+    else if (health.provider === 'openai') mode.textContent = `IA ativa via OpenAI: ${health.model}`;
+    else mode.textContent = 'IA inativa: usando RSS estruturado';
+    return true;
+  } catch {
+    status.textContent = 'Offline';
+    mode.textContent = 'Abra pelo arquivo Abrir Daily Briefing.bat.';
+    return false;
+  }
+}
+
+function setButtonsForFileMode() {
+  ['generateBtn', 'generateSideBtn'].forEach(id => {
+    const button = document.getElementById(id);
+    if (!button) return;
+    button.disabled = true;
+    button.textContent = 'Use o lançador .bat';
+  });
+}
+
+function applyStoredTheme() {
+  const stored = localStorage.getItem(THEME_KEY) || 'dark';
+  document.documentElement.dataset.theme = stored;
+  document.getElementById('themeBtn').textContent = stored === 'dark' ? 'Modo claro' : 'Modo escuro';
+}
+
+function toggleTheme() {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem(THEME_KEY, next);
+  document.getElementById('themeBtn').textContent = next === 'dark' ? 'Modo claro' : 'Modo escuro';
+}
+
+async function refreshHistory() {
+  const list = document.getElementById('historyList');
+  try {
+    const { dates } = await api('/api/briefings');
+    if (!dates.length) {
+      list.innerHTML = '<li class="history-empty">Nenhum briefing salvo</li>';
+      return;
+    }
+    list.innerHTML = dates.map(date => `
+      <li><button data-date="${date}" onclick="loadBriefing('${date}')">${formatDate(date)}</button></li>
+    `).join('');
+    markActiveHistory();
+  } catch {
+    list.innerHTML = '<li class="history-empty">Historico indisponivel</li>';
+  }
+}
+
+function markActiveHistory() {
+  document.querySelectorAll('[data-date]').forEach(button => {
+    button.classList.toggle('active', currentBriefing?.date === button.dataset.date);
+  });
+}
+
+async function loadToday() {
+  try {
+    await loadBriefing(todayISO(), false);
+  } catch {
+    document.getElementById('emptyState').style.display = 'grid';
+    document.getElementById('briefingView').style.display = 'none';
+  }
+}
+
+async function loadBriefing(date, showErrors = true) {
+  try {
+    const briefing = await api(`/api/briefings/${date}`);
+    renderBriefing(briefing);
+  } catch (error) {
+    if (showErrors) showToast('Briefing nao encontrado.');
+    throw error;
+  }
+}
+
+function setGenerating(isGenerating) {
+  ['generateBtn', 'generateSideBtn'].forEach(id => {
+    const button = document.getElementById(id);
+    if (!button) return;
+    button.disabled = isGenerating;
+    button.innerHTML = isGenerating ? '<span class="spinner"></span> Gerando...' : (id === 'generateBtn' ? 'Gerar briefing de hoje' : 'Gerar briefing');
+  });
+}
+
+async function generateBriefing(force = false) {
+  setGenerating(true);
+  try {
+    const briefing = await api('/api/briefings', {
+      method: 'POST',
+      body: JSON.stringify({ date: todayISO(), force })
+    });
+    renderBriefing(briefing);
+    await refreshHistory();
+    showToast(briefing.mode === 'fallback' ? 'Briefing gerado em fallback RSS.' : 'Briefing gerado com IA.');
+  } catch (error) {
+    showToast('Falha ao gerar. Verifique se o servidor esta rodando.');
+    console.error(error);
+  } finally {
+    setGenerating(false);
+  }
+}
+
+function renderBriefing(briefing) {
+  currentBriefing = briefing;
+  document.getElementById('emptyState').style.display = 'none';
+  const view = document.getElementById('briefingView');
+  view.style.display = 'block';
+  const generated = new Date(briefing.generatedAt).toLocaleString('pt-BR', {
+    day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+  });
+  const mode = briefing.mode === 'fallback' ? 'RSS estruturado' : 'IA';
+
+  view.innerHTML = `
+    <div class="topbar">
+      <div>
+        <h2>Briefing do dia</h2>
+        <div class="date-line">${formatDate(briefing.date)} · Gerado em ${generated} · ${mode}</div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="generateBriefing(true)">Atualizar</button>
+        <button class="btn" onclick="copyMarkdown()">Copiar Markdown</button>
+        <a class="btn" href="/api/briefings/${briefing.date}.md" download="briefing-${briefing.date}.md">Baixar .md</a>
+      </div>
+    </div>
+    <article class="headline">
+      <div class="eyebrow">Manchete do dia</div>
+      <h1>${escapeHtml(briefing.headline?.title || 'Sem manchete')}</h1>
+      <p>${escapeHtml(briefing.headline?.summary || '')}</p>
+    </article>
+    ${briefing.sections.map(renderSection).join('')}
+    ${renderWhy(briefing.whyItMatters)}
+    ${renderSources(briefing.sourceLinks)}
+    ${renderErrors(briefing.errors)}
+  `;
+  markActiveHistory();
+}
+
+function renderSection(section) {
+  const items = section.items || [];
+  return `
+    <section class="section">
+      <div class="section-header">
+        <h3>${escapeHtml(section.name)}</h3>
+        <span class="badge">${items.length} topicos</span>
+      </div>
+      <div class="item-list">
+        ${items.length ? items.map(renderItem).join('') : '<div class="notice">Nenhuma noticia relevante encontrada nesta secao.</div>'}
+      </div>
+    </section>
+  `;
+}
+
+function renderItem(item) {
+  const link = item.link || '#';
+  return `
+    <article class="news-item">
+      <div class="news-meta">${escapeHtml(item.source || 'Fonte')}</div>
+      <h4><a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h4>
+      <p>${escapeHtml(item.context || '')}</p>
+    </article>
+  `;
+}
+
+function renderWhy(items = []) {
+  return `
+    <section class="why">
+      <h3>Por que isso importa</h3>
+      <ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+    </section>
+  `;
+}
+
+function renderSources(sources = []) {
+  if (!sources.length) return '';
+  return `
+    <section class="sources">
+      <h3>Links das fontes</h3>
+      <ul>${sources.map(source => `
+        <li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.source)} - ${escapeHtml(source.title)}</a></li>
+      `).join('')}</ul>
+    </section>
+  `;
+}
+
+function renderErrors(errors = []) {
+  if (!errors.length) return '';
+  return `
+    <details class="errors">
+      <summary>Fontes com falha ou avisos (${errors.length})</summary>
+      <ul>${errors.map(error => `<li>${escapeHtml(error.source)}: ${escapeHtml(error.message)}</li>`).join('')}</ul>
+    </details>
+  `;
+}
+
+function markdownFromBriefing(briefing) {
+  const lines = [];
+  lines.push(`# Daily Briefing - ${briefing.date}`, '');
+  lines.push(`## Manchete do dia`, '', `**${briefing.headline.title}**`, '', briefing.headline.summary, '');
+  briefing.sections.forEach(section => {
+    lines.push(`## ${section.name}`, '');
+    section.items.forEach(item => {
+      lines.push(`- **${item.title}** - ${item.context}${item.link ? ` ([fonte](${item.link}))` : ''}`);
+    });
+    lines.push('');
+  });
+  lines.push('## Por que isso importa', '');
+  briefing.whyItMatters.forEach(item => lines.push(`- ${item}`));
+  lines.push('', '## Links das fontes', '');
+  briefing.sourceLinks.forEach(source => lines.push(`- [${source.source} - ${source.title}](${source.url})`));
+  return lines.join('\n');
+}
+
+async function copyMarkdown() {
+  if (!currentBriefing) return;
+  await navigator.clipboard.writeText(markdownFromBriefing(currentBriefing));
+  showToast('Markdown copiado.');
+}
+
+async function showSources() {
+  document.getElementById('sourcesModal').style.display = 'flex';
+  await loadSources();
+}
+
+function hideSources() {
+  document.getElementById('sourcesModal').style.display = 'none';
+}
+
+function closeSourcesOnBackdrop(event) {
+  if (event.target.id === 'sourcesModal') hideSources();
+}
+
+async function loadSources() {
+  currentSources = await api('/api/sources');
+  renderSourcesEditor();
+  document.getElementById('prefInput').value = currentSources.preferences || '';
+}
+
+function renderSourcesEditor() {
+  const editor = document.getElementById('sourcesEditor');
+  editor.innerHTML = `
+    <div class="source-group" style="background:var(--surface-2)">
+      <label>Preferências Pessoais / Filtros</label>
+      <textarea id="prefInput" class="field" rows="3" placeholder="Ex: Não me mostre notícias de esportes. Foque mais em Inteligência Artificial."></textarea>
+      <div style="font-size:0.7rem; color:var(--muted); margin-top:0.3rem">Instruções passadas diretamente para a IA para personalizar seu briefing.</div>
+    </div>
+  ` + currentSources.categories.map((category, categoryIndex) => `
+    <div class="source-group">
+      <label>Categoria</label>
+      <input class="field" value="${escapeHtml(category.name)}" data-category="${categoryIndex}" data-field="categoryName">
+      ${category.feeds.map((feed, feedIndex) => `
+        <div class="source-row">
+          <input class="field" value="${escapeHtml(feed.name)}" data-category="${categoryIndex}" data-feed="${feedIndex}" data-field="name" placeholder="Nome">
+          <input class="field" value="${escapeHtml(feed.url)}" data-category="${categoryIndex}" data-feed="${feedIndex}" data-field="url" placeholder="URL RSS">
+          <button class="btn" onclick="removeFeed(${categoryIndex},${feedIndex})">X</button>
+        </div>
+      `).join('')}
+      <button class="btn" style="margin-top:.55rem" onclick="addFeed(${categoryIndex})">Adicionar feed</button>
+    </div>
+  `).join('');
+}
+
+function syncSourcesFromInputs() {
+  document.querySelectorAll('[data-field="categoryName"]').forEach(input => {
+    currentSources.categories[Number(input.dataset.category)].name = input.value.trim();
+  });
+  document.querySelectorAll('[data-feed]').forEach(input => {
+    const category = currentSources.categories[Number(input.dataset.category)];
+    const feed = category.feeds[Number(input.dataset.feed)];
+    feed[input.dataset.field] = input.value.trim();
+  });
+}
+
+function addFeed(categoryIndex) {
+  syncSourcesFromInputs();
+  currentSources.categories[categoryIndex].feeds.push({ name: '', url: '', maxItems: 4 });
+  renderSourcesEditor();
+}
+
+function removeFeed(categoryIndex, feedIndex) {
+  syncSourcesFromInputs();
+  currentSources.categories[categoryIndex].feeds.splice(feedIndex, 1);
+  renderSourcesEditor();
+}
+
+async function saveSources() {
+  syncSourcesFromInputs();
+  currentSources.preferences = document.getElementById('prefInput').value.trim();
+  currentSources.categories.forEach(category => {
+    category.feeds = category.feeds.filter(feed => feed.name && feed.url);
+  });
+  await api('/api/sources', {
+    method: 'POST',
+    body: JSON.stringify(currentSources)
+  });
+  hideSources();
+  showToast('Fontes salvas.');
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') hideSources();
+});
+</script>
+</body>
+</html>

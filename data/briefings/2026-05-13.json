@@ -1,0 +1,230 @@
+{
+  "date": "2026-05-13",
+  "generatedAt": "2026-05-13T22:20:58.823Z",
+  "mode": "groq",
+  "headline": {
+    "title": "Alesp aprova novo salário mínimo paulista de R$ 1.874",
+    "summary": "A Assembleia Legislativa do Estado de São Paulo (Alesp) aprovou o novo salário-mínimo paulista. O valor é de R$ 1.874 e inclui um abono complementar a servidores que não recebem o piso."
+  },
+  "sections": [
+    {
+      "id": "brasil",
+      "name": "Brasil",
+      "items": [
+        {
+          "title": "Alesp aprova novo salário mínimo paulista de R$ 1.874 e abono a servidores que não recebem piso",
+          "context": "A Assembleia Legislativa do Estado de São Paulo (Alesp) aprovou o novo salário-mínimo paulista e o abono complementar a servidores.",
+          "source": "G1",
+          "link": "https://g1.globo.com/sp/sao-paulo/noticia/2026/05/13/alesp-aprova-novo-salario-minimo-paulista-de-r-1874-e-abono-a-servidores-que-nao-recebem-piso.ghtml"
+        },
+        {
+          "title": "Como funcionava o suposto esquema de desvios em contratos de tapa-buracos em Campo Grande",
+          "context": "A Justiça manteve a prisão preventiva de sete investigados na Operação 'Buraco Sem Fim', que apura um suposto esquema de fraude no serviço de tapa-buracos em Campo Grande.",
+          "source": "G1",
+          "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/05/13/buraco-sem-fim-como-funcionava-o-suposto-esquema-de-desvios-em-contratos-de-tapa-buracos-em-campo-grande.ghtml"
+        },
+        {
+          "title": "Expominas, Automóvel Clube, Minascentro: veja imóveis que ALMG autorizou governo de Minas a federalizar ou vender",
+          "context": "A Assembleia Legislativa de Minas Gerais (ALMG) aprovou o projeto de lei que autoriza a federalização e a venda de 190 imóveis do estado como alternativa para pagar a dívida do Executivo estadual com a União.",
+          "source": "G1",
+          "link": "https://g1.globo.com/mg/minas-gerais/noticia/2026/05/13/expominas-automovel-clube-minascentro-veja-imoveis-que-almg-autorizou-governo-de-minas-a-federalizar-ou-vender.ghtml"
+        },
+        {
+          "title": "Relação de Flávio com Vorcaro é vista como 'bomba' na pré-campanha; aliados se dizem surpresos",
+          "context": "O entorno mais próximo do senador Flávio Bolsonaro avalia que a divulgação da informação que o banqueiro Daniel Vorcaro financiou filme sobre o ex-presidente Jair Bolsonaro a pedido do senador como uma bomba na pré-campanha à Presidência.",
+          "source": "G1",
+          "link": "https://g1.globo.com/politica/blog/gerson-camarotti/post/2026/05/13/relacao-de-flavio-com-vorcaro-e-vista-como-bomba-na-pre-campanha-aliados-se-dizem-surpresos.ghtml"
+        },
+        {
+          "title": "EPTV2 - Ribeirão e Franca",
+          "context": "Acompanhe as notícias desta quarta-feira (13).",
+          "source": "G1",
+          "link": "https://g1.globo.com/sp/ribeirao-preto-franca/ao-vivo/eptv-2-ribeirao-e-franca-ao-vivo.ghtml"
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "name": "Mundo",
+      "items": [
+        {
+          "title": "Trump nomeia David Venturella para liderar a ICE",
+          "context": "O ex-executivo de prisões privadas David Venturella foi nomeado para liderar a Agência de Imigração e Controle de Fronteiras dos EUA (ICE).",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/news/2026/5/13/trump-taps-david-venturella-former-private-prison-executive-to-lead-ice?traffic_source=rss"
+        },
+        {
+          "title": "Funeral realizado para dois paramédicos libaneses mortos em ataque israelense",
+          "context": "Centenas de pessoas se reuniram para o funeral de dois paramédicos libaneses mortos em um ataque israelense.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/5/13/funeral-held-for-two-lebanese-paramedics-killed-in-israeli-attack?traffic_source=rss"
+        },
+        {
+          "title": "Especialistas dizem que Trump está 'desesperado por uma vitória' antes de se encontrar com Xi",
+          "context": "Especialistas dizem que o presidente dos EUA, Donald Trump, está 'desesperado por uma vitória' antes de se encontrar com o presidente chinês, Xi Jinping.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/economy/2026/5/13/as-trump-readies-to-meet-xi-experts-say-he-is-desperate-for-a-win?traffic_source=rss"
+        },
+        {
+          "title": "Philip Davis e o Partido Liberal Progressista vencem as eleições gerais nas Bahamas",
+          "context": "O Partido Liberal Progressista, liderado por Philip Davis, venceu as eleições gerais nas Bahamas, marcando a primeira vez em três décadas que um partido político bahamense conquista vitórias consecutivas.",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/news/2026/5/13/philip-davis-and-progressive-liberal-party-win-general-election-in-bahamas?traffic_source=rss"
+        },
+        {
+          "title": "Trump chega à China para conversas de alto nível com Xi",
+          "context": "O presidente dos EUA, Donald Trump, chegou à China para conversas de alto nível com o presidente chinês, Xi Jinping, que devem abordar questões como comércio, Irã e Taiwan.",
+          "source": "BBC World",
+          "link": "https://www.bbc.com/news/articles/c1w28qw1e0xo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    },
+    {
+      "id": "economia",
+      "name": "Economia & Mercados",
+      "items": [
+        {
+          "title": "Aegea registra EBITDA de R$ 3 bi e amplia caixa em 33%",
+          "context": "A Aegea Saneamento iniciou 2026 com crescimento operacional e financeiro, registrando um EBITDA de R$ 3 bilhões e ampliando seu caixa em 33%.",
+          "source": "Valor Econômico",
+          "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/05/13/aegea-registra-ebitda-de-r-3-bi-e-amplia-caixa-em-33-1.ghtml"
+        },
+        {
+          "title": "Lucro líquido da SLC cai 53,8% no 1º trimestre fiscal",
+          "context": "A SLC Agrícola registrou um lucro líquido de R$ 236,08 milhões no primeiro trimestre fiscal, uma queda de 53,8% em relação ao mesmo período do ano anterior.",
+          "source": "Valor Econômico",
+          "link": "https://valor.globo.com/agronegocios/noticia/2026/05/13/lucro-liquido-da-slc-cai-538percent-no-1o-trimestre-fiscal-para-r-23608-milhoes.ghtml"
+        },
+        {
+          "title": "Pedido de dinheiro por Flávio Bolsonaro a Vorcaro vira munição para governo Lula e presidenciáveis",
+          "context": "O pedido de dinheiro feito pelo senador Flávio Bolsonaro ao banqueiro Daniel Vorcaro se tornou um tema político, com o governo Lula e presidenciáveis utilizando a informação para criticar o senador.",
+          "source": "Valor Econômico",
+          "link": "https://valor.globo.com/politica/noticia/2026/05/13/pedido-de-dinheiro-por-flavio-bolsonaro-a-vorcaro-vira-municao-para-governo-lula-e-presidenciaveis.ghtml"
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "name": "Tecnologia, Ciência & Cultura",
+      "items": [
+        {
+          "title": "Microsoft atualiza o Edge Copilot com recursos de IA",
+          "context": "A Microsoft atualizou o navegador Edge com um recurso de IA chamado Copilot, que permite que os usuários obtenham informações de todas as abas abertas.",
+          "source": "The Verge",
+          "link": "https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs"
+        },
+        {
+          "title": "Trump defende o direito de banir especialistas em moderação de conteúdo dos EUA",
+          "context": "A administração Trump está defendendo o direito de banir especialistas em moderação de conteúdo dos EUA, em uma disputa judicial sobre a política de imigração do país.",
+          "source": "The Verge",
+          "link": "https://www.theverge.com/policy/930178/citr-rubio-visa-deportation-misinformation-research"
+        },
+        {
+          "title": "YouTube corteja criadores e patrocinadores com shows de streaming",
+          "context": "O YouTube está cortejando criadores e patrocinadores com shows de streaming, como parte de sua estratégia para competir com outras plataformas de mídia.",
+          "source": "The Verge",
+          "link": "https://www.theverge.com/news/930092/youtube-creators-shows-sponsors-netflix-upfront"
+        },
+        {
+          "title": "FCC ajuda AT&T e Starlink a comprar espectro de EchoStar",
+          "context": "A Comissão Federal de Comunicações (FCC) dos EUA aprovou a venda do espectro de EchoStar para AT&T e Starlink, o que gerou críticas de pequenas operadoras de telecomunicações.",
+          "source": "Ars Technica",
+          "link": "https://arstechnica.com/tech-policy/2026/05/fcc-angers-small-carriers-by-helping-att-and-starlink-buy-echostar-spectrum/"
+        }
+      ]
+    }
+  ],
+  "whyItMatters": [
+    "A aprovação do novo salário mínimo paulista pode ter impacto na economia do estado.",
+    "A relação entre Flávio Bolsonaro e Vorcaro pode ter implicações políticas.",
+    "A venda do espectro de EchoStar para AT&T e Starlink pode afetar a competição no mercado de telecomunicações."
+  ],
+  "sourceLinks": [
+    {
+      "source": "G1",
+      "title": "Alesp aprova novo salário mínimo paulista de R$ 1.874 e abono a servidores que não recebem piso",
+      "url": "https://g1.globo.com/sp/sao-paulo/noticia/2026/05/13/alesp-aprova-novo-salario-minimo-paulista-de-r-1874-e-abono-a-servidores-que-nao-recebem-piso.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "Como funcionava o suposto esquema de desvios em contratos de tapa-buracos em Campo Grande",
+      "url": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/05/13/buraco-sem-fim-como-funcionava-o-suposto-esquema-de-desvios-em-contratos-de-tapa-buracos-em-campo-grande.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "Expominas, Automóvel Clube, Minascentro: veja imóveis que ALMG autorizou governo de Minas a federalizar ou vender",
+      "url": "https://g1.globo.com/mg/minas-gerais/noticia/2026/05/13/expominas-automovel-clube-minascentro-veja-imoveis-que-almg-autorizou-governo-de-minas-a-federalizar-ou-vender.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "Relação de Flávio com Vorcaro é vista como 'bomba' na pré-campanha; aliados se dizem surpresos",
+      "url": "https://g1.globo.com/politica/blog/gerson-camarotti/post/2026/05/13/relacao-de-flavio-com-vorcaro-e-vista-como-bomba-na-pre-campanha-aliados-se-dizem-surpresos.ghtml"
+    },
+    {
+      "source": "G1",
+      "title": "EPTV2 - Ribeirão e Franca",
+      "url": "https://g1.globo.com/sp/ribeirao-preto-franca/ao-vivo/eptv-2-ribeirao-e-franca-ao-vivo.ghtml"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Trump taps David Venturella, former private prison executive, to lead ICE",
+      "url": "https://www.aljazeera.com/news/2026/5/13/trump-taps-david-venturella-former-private-prison-executive-to-lead-ice?traffic_source=rss"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Funeral held for two Lebanese paramedics killed in Israeli attack",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/5/13/funeral-held-for-two-lebanese-paramedics-killed-in-israeli-attack?traffic_source=rss"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "As Trump readies to meet Xi, experts say he is ‘desperate for a win’",
+      "url": "https://www.aljazeera.com/economy/2026/5/13/as-trump-readies-to-meet-xi-experts-say-he-is-desperate-for-a-win?traffic_source=rss"
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Philip Davis and Progressive Liberal Party win general election in Bahamas",
+      "url": "https://www.aljazeera.com/news/2026/5/13/philip-davis-and-progressive-liberal-party-win-general-election-in-bahamas?traffic_source=rss"
+    },
+    {
+      "source": "BBC World",
+      "title": "Trade, Iran and Taiwan on the agenda as Trump arrives in China for high-stakes talks with Xi",
+      "url": "https://www.bbc.com/news/articles/c1w28qw1e0xo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "source": "Valor Econômico",
+      "title": "Aegea registra EBITDA de R$ 3 bi e amplia caixa em 33%",
+      "url": "https://valor.globo.com/patrocinado/dino/noticia/2026/05/13/aegea-registra-ebitda-de-r-3-bi-e-amplia-caixa-em-33-1.ghtml"
+    },
+    {
+      "source": "Valor Econômico",
+      "title": "Lucro líquido da SLC cai 53,8% no 1º trimestre fiscal, para R$ 236,08 milhões",
+      "url": "https://valor.globo.com/agronegocios/noticia/2026/05/13/lucro-liquido-da-slc-cai-538percent-no-1o-trimestre-fiscal-para-r-23608-milhoes.ghtml"
+    },
+    {
+      "source": "Valor Econômico",
+      "title": "Pedido de dinheiro por Flávio Bolsonaro a Vorcaro vira munição para governo Lula e presidenciáveis",
+      "url": "https://valor.globo.com/politica/noticia/2026/05/13/pedido-de-dinheiro-por-flavio-bolsonaro-a-vorcaro-vira-municao-para-governo-lula-e-presidenciaveis.ghtml"
+    },
+    {
+      "source": "The Verge",
+      "title": "Microsoft’s Edge Copilot update uses AI to pull information from across your tabs",
+      "url": "https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs"
+    },
+    {
+      "source": "The Verge",
+      "title": "Trump administration defends right to ban content moderation experts from US",
+      "url": "https://www.theverge.com/policy/930178/citr-rubio-visa-deportation-misinformation-research"
+    },
+    {
+      "source": "The Verge",
+      "title": "YouTube is courting creators — and sponsors — with streaming shows",
+      "url": "https://www.theverge.com/news/930092/youtube-creators-shows-sponsors-netflix-upfront"
+    },
+    {
+      "source": "Ars Technica",
+      "title": "FCC angers small carriers by helping AT&T and Starlink buy EchoStar spectrum",
+      "url": "https://arstechnica.com/tech-policy/2026/05/fcc-angers-small-carriers-by-helping-att-and-starlink-buy-echostar-spectrum/"
+    }
+  ],
+  "errors": []
+}
