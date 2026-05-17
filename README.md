@@ -21,9 +21,6 @@ graph TD
     D -->|Groq / OpenAI| E[Natural Language Processing]
     E -->|Markdown| F[Delivery Layer]
     F -->|HTTP POST| G[WhatsApp via CallMeBot]
-    
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#ff9,stroke:#333,stroke-width:2px
 ```
 
 ## 🚀 Key Features
