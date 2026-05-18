@@ -1,15 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { 
-      "src": "index.html", 
-      "use": "@vercel/static" 
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
     },
-    { 
-      "src": "api/cron.js", 
+    {
+      "src": "api/cron.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": "sources.json"
+        "includeFiles": ["sources.json", "lib/**"]
       }
     }
   ],

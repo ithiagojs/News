@@ -1,4 +1,5 @@
 .env
+node_modules/
+data/
 server.out.log
 server.err.log
-node_modules/
