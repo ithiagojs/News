@@ -30,6 +30,8 @@ server.listen(PORT, () => {
   console.log(`Daily Briefing local em http://localhost:${PORT}`);
   if (process.env.GROQ_API_KEY) {
     console.log(`Modo IA: ativo via Groq (${GROQ_MODEL})`);
+  } else if (process.env.GEMINI_API_KEY) {
+    console.log(`Modo IA: ativo via Gemini (${process.env.GEMINI_MODEL || 'gemini-1.5-flash'})`);
   } else if (process.env.OPENAI_API_KEY) {
     console.log(`Modo IA: ativo via OpenAI (${OPENAI_MODEL})`);
   } else {
